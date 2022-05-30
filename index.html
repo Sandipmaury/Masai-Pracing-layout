@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE PRICING LAYOUT</title>
+    <style>
+        #header>h1 {
+            width: 38%;
+            text-align: center;
+            margin: auto;
+            margin-top: 60px;
+            font-size: 50px;
+        }
+
+        #header>p {
+            width: 45%;
+            text-align: center;
+            margin: auto;
+            margin-top: 40px;
+            font-size: 20px;
+            color: gray;
+
+        }
+
+        #main {
+            display: grid;
+            width: 65%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 30px;
+            margin: auto;
+            margin-top: 70px
+        }
+
+        #main>div {
+            border-radius: 10px;
+            text-align: center;
+            font-family: Inter, sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+            padding: 30px 0px 30px 0px;
+        }
+
+        #main>div:nth-child(1)>h1 {
+            color: #09ab78;
+        }
+
+        #main>div:nth-child(2)>h1 {
+            color: #f38a55;
+        }
+
+        #main>div:nth-child(3)>h1 {
+            color: #4294f2;
+        }
+
+        #main>div:nth-child(2)>button {
+            background-color: #007aff;
+            color: white;
+        }
+
+        h2+h1+p {
+            font-style: italic;
+            color: gray;
+            margin-top: -18px;
+        }
+
+        P+P {
+            color: gray;
+            font-size: 20px;
+            margin: 40px 20px;
+            line-height: 30px;
+        }
+
+        button {
+            padding: 20px 50px 20px 50px;
+            color: #007aff;
+            border: 2px solid #007aff;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+
+        @media all and (min-width:480px) and (max-width:720px) {
+            #main {
+                width: 95%;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, auto);
+            }
+
+            #header>h1 {
+                width: 60%;
+                font-size: 30px;
+            }
+
+            #header>p {
+                width: 85%;
+                font-size: 20px;
+
+            }
+        }
+
+        @media all and (min-width:320px) and (max-width:479px) {
+            #main {
+                width: 95%;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, auto);
+            }
+
+            #header>h1 {
+                width: 90%;
+                font-size: 30px;
+            }
+
+            #header>p {
+                width: 95%;
+                font-size: 20px;
+
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Choose a plan that right for your business</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis ratione, ipsum numquam saepe neque amet
+            consectetur officiis nulla esse, alias perspiciatis itaque odio.</p>
+    </div>
+    <div id="main">
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>Per month</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium ex voluptatibus
+                dignissimos, ullam quia,</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Business Plan</h2>
+            <h1>$39.00</h1>
+            <p>Per month</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium ex voluptatibus
+                dignissimos, ullam quia,</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Premium Plan</h2>
+            <h1>$59.00</h1>
+            <p>Per month</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium ex voluptatibus
+                dignissimos, ullam quia,</p>
+            <button>Start Now</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
